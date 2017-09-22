@@ -82,7 +82,7 @@ class packer::vsphere::repos inherits packer::vsphere::params {
         $base_url = "${repo_mirror}/${loweros}${::operatingsystemmajrelease}-${::architecture}"
       } elsif $::operatingsystem == 'CentOS' {
         $base_url = "${repo_mirror}/__mirror-${loweros}/${::operatingsystemmajrelease}"
-      } else
+      } else {
         $base_url = "${repo_mirror}/${loweros}-${::operatingsystemmajrelease}-${::architecture}"
       }
 
