@@ -1,6 +1,6 @@
 class packer::vsphere::params {
 
-  $repo_mirror = 'http://osmirror.delivery.puppetlabs.net'
+  $repo_mirror = 'http://artifactory.delivery.puppetlabs.net/artifactory'
   $loweros     = downcase($::operatingsystem)
 
   case $::operatingsystem {
