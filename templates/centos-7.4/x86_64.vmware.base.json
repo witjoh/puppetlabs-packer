@@ -5,7 +5,7 @@
       "template_name": "centos-7.4-x86_64",
       "template_os": "rhel6-64",
 
-      "iso_url": "http://artifactory.delivery.puppetlabs.net/iso/CentOS-7-x86_64-DVD-1708.iso",
+      "iso_url": "http://artifactory.delivery.puppetlabs.net/artifactory/iso/CentOS-7-x86_64-DVD-1708.iso",
       "iso_checksum": "4d2d3973ce2f3ad669eb2c3ca99b0f43f36cfce9",
       "iso_checksum_type": "sha1",
 
