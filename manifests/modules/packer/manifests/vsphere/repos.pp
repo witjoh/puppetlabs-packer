@@ -80,13 +80,15 @@ class packer::vsphere::repos inherits packer::vsphere::params {
       # Fedora URLs do not use a '-' after the os name (i.e. they use fedora26, not fedora-26)
       if $::operatingsystem == 'Fedora' {
         $base_url = "${repo_mirror}/${loweros}${::operatingsystemmajrelease}-${::architecture}"
-      } else {
+      } elsif $::operatingsystem == 'CentOS' {
+        $base_url = "${repo_mirror}/__mirror-${loweros}/${::operatingsystemmajrelease}"
+      } else
         $base_url = "${repo_mirror}/${loweros}-${::operatingsystemmajrelease}-${::architecture}"
       }
 
       yumrepo { "localmirror-os":
         descr    => "localmirror-os",
-        baseurl  => "${base_url}/RPMS.os",
+        baseurl  => "${base_url}/os/${::architecture}",
         gpgcheck => "1",
         gpgkey   => "file:///etc/pki/rpm-gpg/${gpgkey}"
       }
@@ -98,7 +100,7 @@ class packer::vsphere::repos inherits packer::vsphere::params {
       }
       yumrepo { "localmirror-${updates_ext}":
         descr    => "localmirror-${updates_ext}",
-        baseurl  => "${base_url}/RPMS.${updates_ext}",
+        baseurl  => "${base_url}/${updates_ext}/${::architecture}",
         gpgcheck => "1",
         gpgkey   => "file:///etc/pki/rpm-gpg/${gpgkey}"
       }
