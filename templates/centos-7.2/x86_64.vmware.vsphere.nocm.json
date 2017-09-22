@@ -3,11 +3,11 @@
   "variables":
     {
       "template_name": "centos-7.2-x86_64",
-      "version": "0.0.3",
+      "version": "0.0.4",
 
       "provisioner": "vmware",
       "required_modules": "puppetlabs-stdlib example42-network puppetlabs-firewall",
-      "puppet_aio": "http://yum.puppetlabs.com/el/7/PC1/x86_64/puppet-agent-1.8.3-1.el7.x86_64.rpm",
+      "puppet_aio": "http://yum.puppetlabs.com/puppet5/el/7/x86_64/puppet-agent-5.2.0-1.el7.x86_64.rpm",
       "qa_root_passwd": "{{env `QA_ROOT_PASSWD`}}",
       "packer_vcenter_host": "{{env `PACKER_VCENTER_HOST`}}",
       "packer_vcenter_username": "{{env `PACKER_VCENTER_USERNAME`}}",

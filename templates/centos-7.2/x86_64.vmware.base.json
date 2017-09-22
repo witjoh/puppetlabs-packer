@@ -5,16 +5,16 @@
       "template_name": "centos-7.2-x86_64",
       "template_os": "rhel6-64",
 
-      "iso_url": "http://osmirror.delivery.puppetlabs.net/iso/CentOS-7-x86_64-DVD-1511.iso",
-      "iso_checksum": "907e5755f824c5848b9c8efbb484f3cd945e93faa024bad6ba875226f9683b16",
-      "iso_checksum_type": "sha256",
+      "iso_url": "http://artifactory.delivery.puppetlabs.net/artifactory/iso/CentOS-7-x86_64-DVD-1511.iso",
+      "iso_checksum": "4c6c65b5a70a1142dadb3c65238e9e97253c0d3a",
+      "iso_checksum_type": "sha1",
 
       "memory_size": "512",
       "cpu_count": "1",
 
       "provisioner": "vmware",
       "required_modules": "puppetlabs-stdlib saz-ssh",
-      "puppet_aio": "http://yum.puppetlabs.com/el/7/PC1/x86_64/puppet-agent-1.8.3-1.el7.x86_64.rpm",
+      "puppet_aio": "http://yum.puppetlabs.com/puppet5/el/7/x86_64/puppet-agent-5.2.0-1.el7.x86_64.rpm",
 
 
       "output_directory": "{{env `OUTPUT_DIRECTORY`}}"
