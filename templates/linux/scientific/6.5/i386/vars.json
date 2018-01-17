@@ -2,7 +2,7 @@
     "template_name"                         : "scientific-6.5-i386",
     "template_os"                           : "rhel6",
     "beakerhost"                            : "scientific6-32",
-    "version"                               : "0.0.1",
+    "version"                               : "0.0.2",
     "iso_url"                               : "http://osmirror.delivery.puppetlabs.net/sci6latestserver-i386/iso/SL-65-i386-2013-12-18-Everything-DVD1.iso",
     "iso_checksum"                          : "c1b328c2718050b19895c2a853b945b69b3df69bf76936811400a473b1dbc65b",
     "iso_checksum_type"                     : "sha256",
