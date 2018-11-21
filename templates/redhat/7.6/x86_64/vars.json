@@ -1,0 +1,13 @@
+{
+    "template_name"                         : "redhat-7.6-x86_64",
+    "template_os"                           : "rhel7-64",
+    "beakerhost"                            : "redhat7-64",
+    "version"                               : "0.0.1",
+    "iso_url"                               : "https://artifactory.delivery.puppetlabs.net/artifactory/generic/iso/rhel-server-7.6-x86_64-dvd.iso",
+    "iso_checksum"                          : "60a0be5aeed1f08f2bb7599a578c89ec134b4016cd62a8604b29f15d543a469c",
+    "iso_checksum_type"                     : "sha256",
+    "virtualbox_base_template_os"           : "RedHat_64",
+    "vmware_vsphere_nocm_vmx_data_memsize"  : "6144",
+    "vmware_vsphere_nocm_vmx_data_numvcpus" : "2",
+    "puppet_aio"                            : "http://yum.puppetlabs.com/el/7/PC1/x86_64/puppet-agent-1.10.9-1.el7.x86_64.rpm"
+}
