@@ -5,6 +5,7 @@
     "version"                                              : null,
     "puppet_aio"                                           : null,
 
+    "vagrant_required_modules"                             : null,
     "vmware_vsphere_nocm_required_modules"                 : null,
     "vmware_vsphere_nocm_vmx_data_memsize"                 : null,
     "vmware_vsphere_nocm_vmx_data_numvcpus"                : null,
@@ -60,7 +61,7 @@
   "provisioners": [
     {
       "type"                                : "shell",
-      "execute_command"                     : "{{.Vars}} bash '{{.Path}}' {{user `vmware_vsphere_nocm_required_modules`}}",
+      "execute_command"                     : "{{.Vars}} bash '{{.Path}}' {{user `vmware_vsphere_nocm_required_modules`}} {{user `vagrant_required_modules`}}",
       "environment_vars"                    : [
         "PUPPET_AIO={{user `puppet_aio`}}",
         "PC_REPO={{user `pc_repo`}}"
