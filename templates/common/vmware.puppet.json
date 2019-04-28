@@ -12,10 +12,10 @@
     "vmware_vsphere_nocm_vmx_data_ethernet0_virtualDev"    : "vmxnet3",
     "vmware_vsphere_nocm_vmx_data_ethernet0_pciSlotNumber" : "33",
 
-    "support_status"                        : "puppet_maintained",
+    "support_status"                        : "community_maintained",
     "project_root"                          : "../../../..",
     "headless"                              : "true",
-    "template_config"                       : "vsphere-nocm",
+    "template_config"                       : "puppet",
     "provisioner"                           : "vmware",
     "shutdown_command"                      : "/sbin/halt -h -p",
 
@@ -88,7 +88,7 @@
         "qa_root_passwd"                    : "{{user `qa_root_passwd`}}"
       },
       "manifest_dir"                        : "{{user `project_root`}}/manifests",
-      "manifest_file"                       : "{{user `project_root`}}/manifests/vsphere/nocm.pp"
+      "manifest_file"                       : "{{user `project_root`}}/manifests/vsphere/{{user `template_config`}}.pp"
     },
 
     {
@@ -98,7 +98,6 @@
         "PC_REPO= {{user `pc_repo` }}"
       ],
       "scripts"                             : [
-        "{{user `project_root`}}/scripts/cleanup-aio.sh",
         "{{user `project_root`}}/scripts/cleanup-packer.sh",
         "{{user `project_root`}}/scripts/cleanup-scrub.sh"
       ]

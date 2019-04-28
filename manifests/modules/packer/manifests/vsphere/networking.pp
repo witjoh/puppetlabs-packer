@@ -20,12 +20,12 @@ class packer::vsphere::networking inherits packer::networking::params {
 
     redhat: {
       if ($::operatingsystemmajrelease == '7') {
-        if ( $interface_script != undef ) {
-          file { $interface_script:
-            ensure => absent,
-          }
-        }
-        network::interface { 'ens160':
+        #if ( $interface_script != undef ) {
+        #  file { $interface_script:
+        #    ensure => absent,
+        #  }
+        #}
+        network::interface { 'ens33':
           enable_dhcp   => true,
         }
       }
